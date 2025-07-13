@@ -23,9 +23,9 @@ export const teamMembers: TeamMember[] = [
     image: 'images/usericon.png',
     skills: ['Strategic Planning', 'Business Development', 'Team Leadership', 'Product Vision'],
     social: {
-      linkedin: 'https://linkedin.com/in/sarahjohnson',
+      linkedin: 'https://www.linkedin.com/in/setusairam-y/',
       // twitter: 'https://twitter.com/sarahjohnson',
-      github: 'https://github.com/michaelchen'
+      github: 'https://github.com/setusairam'
     }
   },
   {
@@ -37,8 +37,21 @@ export const teamMembers: TeamMember[] = [
     image: 'images/usericon.png',
     skills: ['System Architecture', 'AI/ML', 'Cloud Computing', 'Technical Leadership'],
     social: {
-      linkedin: 'https://linkedin.com/in/michaelchen',
-      github: 'https://github.com/michaelchen'
+      linkedin: 'https://www.linkedin.com/in/pinnamaneni-praneeth/',
+      github: 'https://github.com/pinnamanenipraneeth08'
+    }
+  },
+  {
+    id: '3',
+    name: 'Naga Sai',
+    role: 'App & Full Stack Developer',
+    department: 'Leadership',
+    bio: 'Leads with technical expertise, building scalable and innovative solutions across the stack.',
+    image: 'images/usericon.png',
+    skills: ['System Architecture', 'AI/ML', 'Cloud Computing', 'Technical Leadership'],
+    social: {
+      linkedin: 'https://www.linkedin.com/in/sirius-ar/',
+      github: 'https://github.com/sirius54817'
     }
   },
 ];

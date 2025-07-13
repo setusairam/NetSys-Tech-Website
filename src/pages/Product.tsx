@@ -16,7 +16,12 @@ import {
   Database,
   Brush,
   LineChart,
-  Pencil
+  Pencil,
+  TypeIcon,
+  FileType2,
+  LucideType,
+  AtSignIcon,
+  Code
 } from 'lucide-react';
 
 const Product: React.FC = () => {
@@ -173,6 +178,35 @@ const Product: React.FC = () => {
         { phase: 'Research & Strategy', duration: '1 week' },
         { phase: 'Content Creation', duration: '2-6 weeks' },
         { phase: 'Review & Optimization', duration: '1 week' }
+      ]
+    },
+    {
+      id: 'Prompting',
+      icon: Code, // You can replace this with a suitable icon for prompt engineering
+      title: 'Prompt Engineering',
+      subtitle: 'Precision Prompts, Powerful Outputs',
+      description: 'We engineer intelligent prompts that maximize the capabilities of large language models (LLMs). From data-driven prompt design to system message optimization and multi-turn interactions, our approach ensures accuracy, consistency, and optimal AI performance across applications.',
+      features: [
+        'Custom Prompt Design for LLMs',
+        'Few-Shot & Zero-Shot Prompt Engineering',
+        'Role-based System Messages',
+        'Prompt Templates for Automation & APIs',
+        'Chain of Thought & Toolformer Patterns',
+        'Multi-turn Conversation Design'
+      ],
+      technologies: [
+        'ChatGPT (OpenAI)', 
+        'Claude (Anthropic)', 
+        'Gemini (Google)', 
+        'PromptLayer', 
+        'LangChain', 
+        'LLM Studio'
+      ],
+      gradient: 'from-blue-600 to-indigo-700',
+      timeline: [
+        { phase: 'Requirement Gathering & Model Selection', duration: '3 days' },
+        { phase: 'Prompt Design & Iteration', duration: '1-2 weeks' },
+        { phase: 'Testing & Optimization', duration: '4-7 days' }
       ]
     }
   ];
