@@ -10,7 +10,8 @@ import {
   MessageSquare,
   Calendar,
   Users,
-  ArrowRight
+  ArrowRight,
+  Globe
 } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -61,26 +62,32 @@ const Contact: React.FC = () => {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'hello@devcorp.com',
+      details: 'netsys.tech25@gmail.com',
       description: 'Send us an email anytime'
     },
-    {
-      icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri from 8am to 6pm PST'
-    },
+    // {
+    //   icon: Phone,
+    //   title: 'Call Us',
+    //   details: '+1 (555) 123-4567',
+    //   description: 'Mon-Fri from 8am to 6pm PST'
+    // },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: '123 Tech Street, Silicon Valley, CA 94000',
-      description: 'Come say hello at our office'
+      title: 'Location',
+      details: 'Remote',
+      description: 'We are on Remote'
     },
     {
       icon: Clock,
       title: 'Working Hours',
-      details: 'Monday - Friday: 8:00 AM - 6:00 PM PST',
+      details: 'Monday - Friday: 10:30 AM - 7:00 PM IST',
       description: 'We respond within 24 hours'
+    },
+    {
+      icon: Globe,
+      title: 'Meet Us',
+      details: 'Virtual Meet',
+      description: 'Mail Us to Plan a Meet with the team'
     }
   ];
 
@@ -181,7 +188,7 @@ const Contact: React.FC = () => {
             >
               <div className="mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Start Your Project
+                  Start Your Project (Mail us this form is under development)
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300">
                   Fill out the form below and we'll get back to you within 24 hours (Currently this is under development so mail us directly).

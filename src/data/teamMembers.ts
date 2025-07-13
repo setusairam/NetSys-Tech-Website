@@ -54,6 +54,32 @@ export const teamMembers: TeamMember[] = [
       github: 'https://github.com/sirius54817'
     }
   },
+  {
+    id: '4',
+    name: 'Somanadh',
+    role: 'Mobile app Developer',
+    department: 'Leadership',
+    bio: 'Leads with technical expertise, building scalable and innovative solutions across the stack.',
+    image: 'images/usericon.png',
+    skills: ['System Architecture', 'AI/ML', 'Cloud Computing', 'Technical Leadership'],
+    social: {
+      linkedin: 'https://www.linkedin.com/in/somanadh-chowdary-jonnalagadda-337b25267/',
+      github: 'https://github.com/Somanadh9319'
+    }
+  },
+  {
+    id: '5',
+    name: 'Chaitanya',
+    role: 'Web & Full Stack Developer',
+    department: 'Leadership',
+    bio: 'Leads with technical expertise, building scalable and innovative solutions across the stack.',
+    image: 'images/usericon.png',
+    skills: ['System Architecture', 'AI/ML', 'Cloud Computing', 'Technical Leadership'],
+    social: {
+      linkedin: 'https://www.linkedin.com/in/kancheti-chaitanya-493a49265/',
+      github: 'https://github.com/kancheti-chaitanya'
+    }
+  },
 ];
 
 export const departments = ['All', 'Leadership', 'Engineering', 'Design', 'Operations'];

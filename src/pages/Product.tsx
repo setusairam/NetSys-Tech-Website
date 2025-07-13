@@ -1,13 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
   Smartphone, 
   Globe, 
   Brain, 
-  Coffee,
   Server,
-  Cloud,
   Shield,
   ArrowRight,
   CheckCircle,
@@ -17,10 +14,6 @@ import {
   Brush,
   LineChart,
   Pencil,
-  TypeIcon,
-  FileType2,
-  LucideType,
-  AtSignIcon,
   Code
 } from 'lucide-react';
 
@@ -31,6 +24,7 @@ const Product: React.FC = () => {
       icon: Smartphone,
       title: 'Mobile App Development',
       subtitle: 'Flutter',
+      shortTitle: 'Mobile Apps',
       description: 'Create stunning, high-performance mobile applications that engage users and drive business growth. Our expert team delivers native apps with seamless user experiences.',
       features: [
         'Native Flutter',
@@ -53,6 +47,7 @@ const Product: React.FC = () => {
       icon: Globe,
       title: 'Web Development',
       subtitle: 'Static, Modern & Responsive Websites',
+      shortTitle: 'Web Development',
       description: 'Build fast, scalable, and responsive web applications using cutting-edge technologies. From simple websites to complex web platforms, we deliver solutions that perform.',
       features: [
         'Responsive Web Design',
@@ -75,6 +70,7 @@ const Product: React.FC = () => {
       icon: Brain,
       title: 'AI & ML Integration',
       subtitle: 'Intelligent Solutions',
+      shortTitle: 'AI & ML',
       description: 'Harness the power of artificial intelligence and machine learning to automate processes, gain insights, and create intelligent applications that adapt to user behavior.',
       features: [
         'Custom AI Model Development',
@@ -97,6 +93,7 @@ const Product: React.FC = () => {
       icon: Server,
       title: 'Full-Stack Solutions',
       subtitle: 'End-to-End Development',
+      shortTitle: 'Full-Stack',
       description: 'Complete software solutions from database design to user interface. We handle every aspect of your application development with modern technology stacks.',
       features: [
         'MERN Stack Development',
@@ -115,10 +112,11 @@ const Product: React.FC = () => {
       ]
     },
     {
-      id: 'UI/UX',
+      id: 'uiux',
       icon: Brush,
       title: 'UI/UX Design',
       subtitle: 'Intuitive and Engaging Interfaces',
+      shortTitle: 'UI/UX Design',
       description: 'Craft beautiful, user-centric designs that enhance user experience and drive engagement. We focus on usability, accessibility, and visual storytelling to ensure your product resonates with your audience.',
       features: [
         'User Research & Persona Creation',
@@ -137,10 +135,11 @@ const Product: React.FC = () => {
       ]
     },
     {
-      id: 'Datasc',
+      id: 'datascience',
       icon: LineChart,
       title: 'Data Science',
       subtitle: 'Insights from Data That Drive Growth',
+      shortTitle: 'Data Science',
       description: 'Leverage data to uncover patterns, make predictions, and optimize decision-making. Our data science solutions help you extract actionable insights using advanced analytics, machine learning, and statistical modeling.',
       features: [
         'Data Collection & Cleaning',
@@ -159,10 +158,11 @@ const Product: React.FC = () => {
       ]
     },
     {
-      id: 'ContentWriting',
+      id: 'contentwriting',
       icon: Pencil,
       title: 'Content Writing',
       subtitle: 'Words That Resonate, Stories That Convert',
+      shortTitle: 'Content Writing',
       description: 'We create captivating content that speaks your brands voice. From ghostwriting and storytelling to persuasive copy and SEO blogs, our writing elevates your presence, builds trust, and drives engagement.',
       features: [
         'Ghostwriting & Thought Leadership',
@@ -175,16 +175,22 @@ const Product: React.FC = () => {
       technologies: ['Grammarly Pro', 'Frase', 'Surfer SEO', 'Hemingway', 'Notion', 'Google Docs'],
       gradient: 'from-rose-500 to-pink-600',
       timeline: [
-        { phase: 'Research & Strategy', duration: '1 week' },
-        { phase: 'Content Creation', duration: '2-6 weeks' },
-        { phase: 'Review & Optimization', duration: '1 week' }
-      ]
+      { phase: 'YouTube Script Writing', duration: '1–2 days' },
+      { phase: 'Blog Article (800–1000 words)', duration: '1 day' },
+      { phase: 'Website Page Copy', duration: '1–2 days' },
+      { phase: 'Social Media Post Set (5–7 posts)', duration: '2 days' },
+      { phase: 'Case Study / Long-form Article', duration: '3–4 days' },
+      { phase: 'Email Newsletter', duration: '1 day' },
+      { phase: 'Ad Copy (3–5 variants)', duration: '0.5–1 day' },
+      { phase: 'Brand Story / About Page', duration: '2 days' }
+    ]
     },
     {
-      id: 'Prompting',
-      icon: Code, // You can replace this with a suitable icon for prompt engineering
+      id: 'prompting',
+      icon: Code,
       title: 'Prompt Engineering',
       subtitle: 'Precision Prompts, Powerful Outputs',
+      shortTitle: 'Prompt Engineering',
       description: 'We engineer intelligent prompts that maximize the capabilities of large language models (LLMs). From data-driven prompt design to system message optimization and multi-turn interactions, our approach ensures accuracy, consistency, and optimal AI performance across applications.',
       features: [
         'Custom Prompt Design for LLMs',
@@ -204,11 +210,13 @@ const Product: React.FC = () => {
       ],
       gradient: 'from-blue-600 to-indigo-700',
       timeline: [
-        { phase: 'Requirement Gathering & Model Selection', duration: '3 days' },
-        { phase: 'Prompt Design & Iteration', duration: '1-2 weeks' },
-        { phase: 'Testing & Optimization', duration: '4-7 days' }
+        { phase: 'Use Case Discovery & Task Framing', duration: '4–6 hours' },
+        { phase: 'LLM Selection & Tool Alignment', duration: '3–4 hours' },
+        { phase: 'Prompt Drafting (Few-shot / Zero-shot)', duration: '6–10 hours' },
+        { phase: 'Evaluation, Testing & Refinement', duration: '5–8 hours' },
+        { phase: 'Integration & PromptOps Setup', duration: '3–5 hours' }
       ]
-    }
+    }    
   ];
 
   const processSteps = [
@@ -238,8 +246,22 @@ const Product: React.FC = () => {
     }
   ];
 
+  const scrollToService = (serviceId: string) => {
+    const element = document.getElementById(serviceId);
+    if (element) {
+      const headerOffset = 100; // Account for fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-purple-900/20 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -262,6 +284,38 @@ const Product: React.FC = () => {
         </div>
       </section>
 
+      {/* Quick Navigation */}
+      <section className="sticky top-0 z-40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              Jump to Service:
+            </h2>
+            <div className="text-sm text-gray-500 dark:text-gray-400">
+              Click to navigate ↓
+            </div>
+          </div>
+          <div className="overflow-x-auto">
+            <div className="flex space-x-4 pb-2 min-w-max">
+              {services.map((service) => (
+                <motion.button
+                  key={service.id}
+                  onClick={() => scrollToService(service.id)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`flex flex-col items-center p-4 min-w-[120px] rounded-xl bg-gradient-to-r ${service.gradient} text-white shadow-md hover:shadow-lg transition-all duration-300 group`}
+                >
+                  <service.icon className="h-6 w-6 mb-2 group-hover:scale-110 transition-transform" />
+                  <span className="text-sm font-medium text-center leading-tight">
+                    {service.shortTitle}
+                  </span>
+                </motion.button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -269,11 +323,12 @@ const Product: React.FC = () => {
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
+                id={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
+                className={`grid lg:grid-cols-2 gap-12 items-center scroll-mt-32 ${
                   index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
                 }`}
               >
@@ -321,13 +376,12 @@ const Product: React.FC = () => {
                     </div>
                   </div>
 
-                  <Link
-                    to="/contact"
+                  <button
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-medium rounded-lg hover:shadow-lg transition-all transform hover:scale-105`}
                   >
                     Get Started
                     <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                  </button>
                 </div>
 
                 <div className={index % 2 === 1 ? 'lg:col-start-1' : ''}>
@@ -363,7 +417,7 @@ const Product: React.FC = () => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section id="process" className="py-20 bg-gray-50 dark:bg-gray-800 scroll-mt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -429,19 +483,13 @@ const Product: React.FC = () => {
               Let's discuss your project requirements and create a custom solution that drives your business forward.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center"
-              >
+              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-all transform hover:scale-105 flex items-center justify-center">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/pricing"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-all flex items-center justify-center"
-              >
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-all flex items-center justify-center">
                 View Pricing
-              </Link>
+              </button>
             </div>
           </motion.div>
         </div>

@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
           <Link to="/" className="flex items-center space-x-3">
             <div className="relative">
               <img
-                src="https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop"
+                src="images/mainlogo.png"
                 alt="NetSys Tech Logo"
                 className="h-10 w-10 rounded-lg object-cover shadow-md"
               />

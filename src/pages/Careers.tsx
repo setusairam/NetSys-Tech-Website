@@ -28,149 +28,76 @@ const Careers: React.FC = () => {
 
   const jobOpenings = [
     {
-      id: '1',
-      title: 'Senior React Developer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$120,000 - $160,000',
-      description: 'Join our frontend team to build cutting-edge web applications using React, TypeScript, and modern development practices.',
-      requirements: [
-        '5+ years of React development experience',
-        'Strong TypeScript and JavaScript skills',
-        'Experience with modern build tools (Vite, Webpack)',
-        'Knowledge of state management (Redux, Zustand)',
-        'Familiarity with testing frameworks (Jest, Cypress)'
-      ],
-      benefits: ['Health Insurance', 'Remote Work', '401k Matching', 'Learning Budget'],
-      featured: true
-    },
-    {
-      id: '2',
-      title: 'Mobile App Developer (iOS/Android)',
-      department: 'Engineering',
-      location: 'San Francisco, CA',
-      type: 'Full-time',
-      salary: '$110,000 - $150,000',
-      description: 'Develop native mobile applications for iOS and Android platforms, working with cross-functional teams to deliver exceptional user experiences.',
-      requirements: [
-        '4+ years of mobile development experience',
-        'Proficiency in Swift/Kotlin or React Native',
-        'Experience with mobile app deployment',
-        'Understanding of mobile UI/UX principles',
-        'Knowledge of mobile testing frameworks'
-      ],
-      benefits: ['Health Insurance', 'Relocation Assistance', '401k Matching', 'Gym Membership'],
-      featured: false
-    },
-    {
-      id: '3',
-      title: 'AI/ML Engineer',
-      department: 'Engineering',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$140,000 - $180,000',
-      description: 'Design and implement machine learning models and AI solutions to solve complex business problems for our clients.',
-      requirements: [
-        'MS/PhD in Computer Science, AI, or related field',
-        'Strong Python and ML framework experience',
-        'Experience with TensorFlow, PyTorch, or similar',
-        'Knowledge of cloud ML platforms (AWS, Azure)',
-        'Understanding of MLOps and model deployment'
-      ],
-      benefits: ['Health Insurance', 'Remote Work', 'Conference Budget', 'Stock Options'],
-      featured: true
-    },
-    {
-      id: '4',
-      title: 'DevOps Engineer',
-      department: 'Engineering',
-      location: 'Austin, TX',
-      type: 'Full-time',
-      salary: '$100,000 - $140,000',
-      description: 'Build and maintain our cloud infrastructure, CI/CD pipelines, and ensure reliable deployment processes.',
-      requirements: [
-        '3+ years of DevOps/Infrastructure experience',
-        'Strong knowledge of AWS/Azure cloud platforms',
-        'Experience with Docker and Kubernetes',
-        'Proficiency in Infrastructure as Code (Terraform)',
-        'Understanding of monitoring and logging tools'
-      ],
-      benefits: ['Health Insurance', 'Flexible Hours', '401k Matching', 'Home Office Setup'],
-      featured: false
-    },
-    {
-      id: '5',
-      title: 'UX/UI Designer',
-      department: 'Design',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$90,000 - $120,000',
-      description: 'Create beautiful, intuitive user experiences and interfaces for web and mobile applications.',
-      requirements: [
-        '4+ years of UX/UI design experience',
-        'Proficiency in Figma, Sketch, or Adobe XD',
-        'Strong portfolio demonstrating design process',
-        'Understanding of user research methodologies',
-        'Experience with design systems and prototyping'
-      ],
-      benefits: ['Health Insurance', 'Remote Work', 'Design Tools Budget', 'Creative Days'],
-      featured: false
-    },
-    {
-      id: '6',
-      title: 'Product Manager',
-      department: 'Product',
-      location: 'New York, NY',
-      type: 'Full-time',
-      salary: '$130,000 - $170,000',
-      description: 'Lead product strategy and roadmap development, working closely with engineering and design teams.',
-      requirements: [
-        '5+ years of product management experience',
-        'Strong analytical and problem-solving skills',
-        'Experience with agile development methodologies',
-        'Excellent communication and leadership skills',
-        'Technical background preferred'
-      ],
-      benefits: ['Health Insurance', 'Equity Package', 'Flexible PTO', 'Team Retreats'],
-      featured: true
-    },
-    {
-      id: '7',
-      title: 'Sales Development Representative',
-      department: 'Sales',
-      location: 'Remote',
-      type: 'Full-time',
-      salary: '$60,000 - $80,000 + Commission',
-      description: 'Generate and qualify leads, build relationships with prospects, and support the sales team in growing our client base.',
-      requirements: [
-        '2+ years of sales or business development experience',
-        'Excellent communication and interpersonal skills',
-        'Experience with CRM tools (Salesforce, HubSpot)',
-        'Self-motivated and goal-oriented',
-        'Interest in technology and software solutions'
-      ],
-      benefits: ['Health Insurance', 'Commission Structure', 'Remote Work', 'Sales Training'],
-      featured: false
-    },
-    {
-      id: '8',
-      title: 'Customer Success Manager',
-      department: 'Customer Success',
-      location: 'Chicago, IL',
-      type: 'Full-time',
-      salary: '$80,000 - $110,000',
-      description: 'Ensure client satisfaction and success by providing ongoing support, training, and strategic guidance.',
-      requirements: [
-        '3+ years of customer success or account management experience',
-        'Strong relationship building and communication skills',
-        'Experience with SaaS products and platforms',
-        'Problem-solving and analytical abilities',
-        'Project management experience preferred'
-      ],
-      benefits: ['Health Insurance', 'Professional Development', 'Flexible Schedule', 'Client Events'],
-      featured: false
-    }
+    id: '1',
+    title: 'ML Engineer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Part-time',
+    salary: 'Equity Basis',
+    description: 'Design and implement scalable machine learning systems to solve real-world business challenges.',
+    requirements: [
+      'Good Projects in ML',
+      'Proficient in Python and ML libraries (TensorFlow, PyTorch)',
+      'Experience in Creating Efficient Models',
+      'Strong understanding of MLOps, model deployment, and monitoring'
+    ],
+    benefits: ['Remote Work', 'Learning Efficient', 'Building portfolio', 'Real-time Experience', 'Recognition at workplace'],
+    featured: true
+  },
+  {
+    id: '2',
+    title: 'Full Stack Developer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    salary: 'Equity Basis',
+    description: 'Work on building full-stack web applications with modern frameworks and tools, ensuring seamless front-end and back-end integration.',
+    requirements: [
+      'decent full stack development experience and projects',
+      'Proficient in JavaScript/TypeScript, React, and Node.js',
+      'Decent with relational and NoSQL databases',
+      'Decent Knowledge of RESTful APIs and GraphQL',
+      'Familiarity with CI/CD, testing frameworks, and DevOps practices'
+    ],
+    benefits: ['Remote Work', 'Learning Efficient', 'Building portfolio', 'Real-time Experience', 'Recognition at workplace'],
+    featured: false
+  },
+  {
+    id: '3',
+    title: 'UI/UX Designer',
+    department: 'Design',
+    location: 'Remote',
+    type: 'Full-time',
+    salary: 'Equity Basis',
+    description: 'Create engaging user experiences and beautiful interfaces for web and mobile applications.',
+    requirements: [
+      'Good UI/UX design experience',
+      'Strong portfolio demonstrating design thinking and process',
+      'Proficiency with Figma, Sketch, or Adobe XD',
+      'Understanding of accessibility and responsive design principles',
+      'Experience with design systems and prototyping tools'
+    ],
+    benefits: ['Remote Work', 'Learning Efficient', 'Building portfolio', 'Real-time Experience', 'Recognition at workplace'],
+    featured: false
+  },
+  {
+    id: '4',
+    title: 'Mobile App Developer',
+    department: 'Engineering',
+    location: 'Remote',
+    type: 'Full-time',
+    salary: 'Equity Basis',
+    description: 'Develop, test, and maintain high-quality mobile applications for cross platforms.',
+    requirements: [
+      'Decent experience in mobile development',
+      'Proficient in Flutter, or React Native',
+      'Experience with app store deployment and CI/CD',
+      'grasp of mobile UI/UX standards and best practices',
+      'Decent porjects in App Development'
+    ],
+    benefits: ['Remote Work', 'Learning Efficient', 'Building portfolio', 'Real-time Experience', 'Recognition at workplace'],
+    featured: true
+  }
   ];
 
   const departments = ['All', 'Engineering', 'Design', 'Product', 'Sales', 'Customer Success'];
@@ -180,7 +107,7 @@ const Careers: React.FC = () => {
     {
       icon: Heart,
       title: 'Health & Wellness',
-      description: 'Comprehensive health insurance, dental, vision, and wellness programs'
+      description: 'Comprehensive work environment without any stress or strain'
     },
     {
       icon: Laptop,
