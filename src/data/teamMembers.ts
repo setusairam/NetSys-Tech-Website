@@ -17,10 +17,10 @@ export const teamMembers: TeamMember[] = [
   {
     id: '1',
     name: 'Setu Sai Ram Y',
-    role: 'Data Analyst and UI/UX Designer',
+    role: 'Data Analyst & UI/UX Designer',
     department: 'Leadership',
     bio: 'Blends analytical precision with creativity to deliver impactful digital solutions and data-driven experiences.',
-    image: 'images/usericon.png',
+    image: '/images/usericon.png',
     skills: ['Strategic Planning', 'Business Development', 'Team Leadership', 'Product Vision'],
     social: {
       linkedin: 'https://www.linkedin.com/in/setusairam-y/',
