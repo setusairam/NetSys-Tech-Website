@@ -35,10 +35,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: Twitter, href: 'https://twitter.com/devcorp', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com/company/devcorp', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com/devcorp', label: 'GitHub' },
-    { icon: Instagram, href: 'https://instagram.com/devcorp', label: 'Instagram' },
+    // { icon: Twitter, href: 'https://twitter.com/devcorp', label: 'Twitter' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/netsys-tech/', label: 'LinkedIn' },
+    // { icon: Github, href: 'https://github.com/devcorp', label: 'GitHub' },
+    // { icon: Instagram, href: 'https://instagram.com/devcorp', label: 'Instagram' },
   ];
 
   return (
@@ -64,11 +64,11 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>Mail Us</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-400">
                 <Mail className="h-4 w-4" />
-                <span>hello@devcorp.com</span>
+                <span>netsys.tech25@gmail.com</span>
               </div>
             </div>
           </div>
