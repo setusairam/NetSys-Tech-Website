@@ -20,10 +20,10 @@ import { teamMembers, departments } from '../data/teamMembers';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: Users, value: '50+', label: 'Team Members' },
-    { icon: Award, value: '500+', label: 'Projects Delivered' },
-    { icon: Star, value: '4.9/5', label: 'Client Satisfaction' },
-    { icon: TrendingUp, value: '200%', label: 'Year-over-Year Growth' }
+    { icon: Users, value: '5+', label: 'Team Members' },
+    { icon: Award, value: '20+', label: 'Projects Delivered' },
+    { icon: Star, value: '4.5/5', label: 'Client Satisfaction' },
+    { icon: TrendingUp, value: '100%', label: 'Growth' }
   ];
 
   const values = [
@@ -53,7 +53,7 @@ const About: React.FC = () => {
     {
       year: '2026',
       title: 'Company Founded',
-      description: 'DevCorp was founded with a mission to democratize access to high-quality software development.',
+      description: 'NetSys was founded with a mission to democratize access to high-quality software development.',
       milestone: true
     },
   ];
@@ -80,7 +80,7 @@ const About: React.FC = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               About{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                DevCorp
+                NetSys
               </span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
@@ -281,7 +281,7 @@ const About: React.FC = () => {
               Meet Our Team
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              The talented individuals who make DevCorp's success possible.
+              The talented individuals who make NetSys Tech's success possible.
             </p>
           </motion.div>
 
