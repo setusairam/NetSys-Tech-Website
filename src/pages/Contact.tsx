@@ -11,7 +11,12 @@ import {
   Calendar,
   Users,
   ArrowRight,
-  Globe
+  Globe,
+  Group,
+  GroupIcon,
+  LucideGroup,
+  PersonStandingIcon,
+  Users2Icon
 } from 'lucide-react';
 
 const Contact: React.FC = () => {
@@ -58,36 +63,55 @@ const Contact: React.FC = () => {
     }, 3000);
   };
 
+  const handleContactClick = (type: string, value: string) => {
+    switch (type) {
+      case 'email':
+        window.location.href = `mailto:${value}`;
+        break;
+      case 'phone':
+        window.location.href = `tel:${value}`;
+        break;
+      case 'whatsapp':
+        // Replace this URL with your actual WhatsApp community link
+        window.open('https://chat.whatsapp.com/J6EiQiMcsMY9ONHQ0jKp03', '_blank');
+        break;
+      default:
+        break;
+    }
+  };
+
   const contactInfo = [
     {
       icon: Mail,
       title: 'Email Us',
       details: 'netsys.tech25@gmail.com',
-      description: 'Send us an email anytime'
+      description: 'Send us an email anytime',
+      type: 'email',
+      value: 'netsys.tech25@gmail.com'
     },
-    // {
-    //   icon: Phone,
-    //   title: 'Call Us',
-    //   details: '+1 (555) 123-4567',
-    //   description: 'Mon-Fri from 8am to 6pm PST'
-    // },
     {
       icon: MapPin,
       title: 'Location',
       details: 'Remote',
-      description: 'We are on Remote'
+      description: 'Mail Us to Schedule a Virtual Meet with the team',
+      type: 'location',
+      value: ''
     },
     {
       icon: Clock,
       title: 'Working Hours',
       details: 'Monday - Friday: 10:30 AM - 7:00 PM IST',
-      description: 'We respond within 24 hours'
+      description: 'We respond within 24 hours',
+      type: 'time',
+      value: ''
     },
     {
-      icon: Globe,
-      title: 'Meet Us',
-      details: 'Virtual Meet',
-      description: 'Mail Us to Plan a Meet with the team'
+      icon: Users2Icon,
+      title: 'Join our WhatsApp Community',
+      // details: 'Join Community',
+      description: 'Connect with our team and network with the community',
+      type: 'whatsapp',
+      value: 'https://chat.whatsapp.com/J6EiQiMcsMY9ONHQ0jKp03' // Replace with your actual link
     }
   ];
 
@@ -155,7 +179,10 @@ const Contact: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-xl text-center hover:shadow-lg transition-shadow"
+                className={`bg-gray-50 dark:bg-gray-800 p-6 rounded-xl text-center hover:shadow-lg transition-all transform hover:scale-105 ${
+                  info.type === 'email' || info.type === 'whatsapp' ? 'cursor-pointer' : ''
+                }`}
+                onClick={() => info.type === 'email' || info.type === 'whatsapp' ? handleContactClick(info.type, info.value) : null}
               >
                 <div className="bg-gradient-to-r from-blue-500 to-purple-600 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <info.icon className="h-6 w-6 text-white" />
@@ -169,6 +196,11 @@ const Contact: React.FC = () => {
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   {info.description}
                 </p>
+                {(info.type === 'email' || info.type === 'whatsapp') && (
+                  <div className="mt-3 text-blue-600 dark:text-blue-400 text-sm font-medium">
+                    Click to {info.type === 'email' ? 'email' : 'join'}
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
@@ -371,7 +403,10 @@ const Contact: React.FC = () => {
                   Quick Actions
                 </h3>
                 <div className="space-y-4">
-                  <button className="w-full flex items-center justify-between p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group">
+                  <button 
+                    onClick={() => handleContactClick('email', 'netsys.tech25@gmail.com')}
+                    className="w-full flex items-center justify-between p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors group"
+                  >
                     <div className="flex items-center">
                       <Calendar className="h-6 w-6 text-blue-600 dark:text-blue-400 mr-3" />
                       <div className="text-left">
@@ -382,7 +417,10 @@ const Contact: React.FC = () => {
                     <ArrowRight className="h-5 w-5 text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform" />
                   </button>
 
-                  <button className="w-full flex items-center justify-between p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors group">
+                  <button 
+                    onClick={() => handleContactClick('whatsapp', 'https://chat.whatsapp.com/J6EiQiMcsMY9ONHQ0jKp03')}
+                    className="w-full flex items-center justify-between p-4 bg-purple-50 dark:bg-purple-900/20 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-900/30 transition-colors group"
+                  >
                     <div className="flex items-center">
                       <MessageSquare className="h-6 w-6 text-purple-600 dark:text-purple-400 mr-3" />
                       <div className="text-left">
@@ -393,7 +431,10 @@ const Contact: React.FC = () => {
                     <ArrowRight className="h-5 w-5 text-purple-600 dark:text-purple-400 group-hover:translate-x-1 transition-transform" />
                   </button>
 
-                  <button className="w-full flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors group">
+                  <button 
+                    onClick={() => handleContactClick('email', 'netsys.tech25@gmail.com')}
+                    className="w-full flex items-center justify-between p-4 bg-green-50 dark:bg-green-900/20 rounded-lg hover:bg-green-100 dark:hover:bg-green-900/30 transition-colors group"
+                  >
                     <div className="flex items-center">
                       <Users className="h-6 w-6 text-green-600 dark:text-green-400 mr-3" />
                       <div className="text-left">
@@ -458,7 +499,10 @@ const Contact: React.FC = () => {
               Join hundreds of satisfied clients who have transformed their businesses with our solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-all transform hover:scale-105">
+              <button 
+                onClick={() => handleContactClick('email', 'netsys.tech25@gmail.com')}
+                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-medium hover:shadow-xl transition-all transform hover:scale-105"
+              >
                 Schedule Free Consultation
               </button>
               <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-blue-600 transition-all">
